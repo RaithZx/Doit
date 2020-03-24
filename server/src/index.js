@@ -4,6 +4,7 @@ const helmet = require('helmet');
 const cors = require('cors');
 const mongoose = require('mongoose');
 
+require('dotenv').config();
 const app = express();
 
 app.use(express.json());
@@ -12,4 +13,5 @@ app.use(helmet());
 app.use(cors({
   origin: process.env.CORS_ORIGIN
 }))
-app.use
+
+app.listen(process.env.PORT);
